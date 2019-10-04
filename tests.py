@@ -1,5 +1,5 @@
 import unittest
-from functions import sum
+from functions import sum, subtract
 
 class TestFunctions(unittest.TestCase):
     def test_ints(self):
@@ -7,6 +7,9 @@ class TestFunctions(unittest.TestCase):
 
     def test_doubles(self):
         self.assertEqual(sum(1.4, 2.2), 3.6)
+
+    def test_subtract_ints(self):
+        self.assertEqual(subtract(20, 3), 17)
 
     def test_invalid(self):
         with self.assertRaises(TypeError):
