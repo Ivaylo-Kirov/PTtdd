@@ -1,5 +1,5 @@
 import unittest
-from functions import sum, subtract
+from functions import sum, subtract, find_matching_substrings
 
 class TestFunctions(unittest.TestCase):
     def test_ints(self):
@@ -24,6 +24,12 @@ class TestFunctions(unittest.TestCase):
 
     def test_split(self):
         self.assertEqual('hello world'.split(), ['hello', 'world'])
+
+    def test_substrings(self):
+        self.assertEqual(find_matching_substrings('twone', 'one'), [2])
+    
+    def test_substrings_2(self):
+        self.assertEqual(find_matching_substrings('twoneone', 'one'), [2, 5])
 
 
 if __name__ == "__main__":
